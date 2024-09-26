@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.box1 {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(53, 53, 53), rgba(46, 45, 45, 0.75)),
+        url('https://assets.architecturaldigest.in/photos/60083c6d94238cf91d10890c/16:9/w_2560%2Cc_limit/Chennai-home-interior-design-photos-1366x768.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex; 
+    flex-direction: column;
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.box2 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.box2 h1 {
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.box2 p {
+    margin: 20px auto;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 17px;
+}
+
+.no-margin {
+    margin-bottom: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.button-container a {
+    display: inline-block; /* Ensure anchor tags behave like buttons */
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #fff;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.button-container a:hover {
+    background: #009688;
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.bedroom-page h1 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    background: linear-gradient(90deg, #FF5733, #33FF57, #3357FF, #FF33A1, #FFDF33);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 6s ease infinite;
+}
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 30%;
+    margin: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.image-container .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -20px;
+    right: 0;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+
+.dining-page h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    background: linear-gradient(90deg, #FF5733, #33FF57, #3357FF, #FF33A1, #FFDF33);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 6s ease infinite;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.image-container {
+    position: relative;
+    width: 30%;
+    margin: 5px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.image-container .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.kitchen-header {
+    text-align: center;
+    padding: 20px 8px;
+    color: rgb(0, 0, 0);
+}
+
+.kitchen-header h1 {
+    font-size: 35px;
+    margin-bottom: -3px;
+    background: linear-gradient(90deg, #FF5733, #33FF57, #3357FF, #FF33A1, #FFDF33);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.kitchen-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 30%;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+
+.backyard-section .backyard-header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.backyard-section .backyard-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #FF5733, #33FF57, #3357FF, #FF33A1, #FFDF33);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.backyard-section .backyard-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.backyard-section .gallery-item {
+    position: relative;
+    width: 30%;
+    min-height: 250px;
+    margin: 20px 10px 0;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.backyard-section .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.backyard-section .gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.backyard-section .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.backyard-section .gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3988ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        margin: 0;
+        left: 0;
+        background-color: rgba(53, 53, 53, 0.9);
+        width: 100%;
+        z-index: 10;
+    }
+
+    .mobile-up {
+        margin-top: -10px;
+    }
+
+    .box2 h1 {
+        font-size: 30px;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .image-container {
+        width: 45%;
+        margin: 10px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bedroom-page h1 {
+        font-size: 35px;
+    }
+
+    .overlay p {
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        width: 90%;
+        margin: 10px auto;
+        height: auto;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .image-container {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        width: 90%;
+        margin: 5px auto;
+        height: auto;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .gallery-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    .kitchen-header {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .backyard-section .gallery-item {
+        width: 45%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .backyard-section .gallery-item {
+        width: 100vw;
+        min-height: 250px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .backyard-section .backyard-header h1 {
+        font-size: 28px;
+    }
+
+    .backyard-section .gallery-item {
+        width: 100%;
+        min-height: 200px;
+        margin: 10px;
+    }
+
+    .backyard-section .overlay {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .backyard-section .backyard-header h1 {
+        font-size: 27px;
+    }
+
+    .backyard-section .backyard-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .backyard-section .gallery-item {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .kitchen-header h1 {
+        font-size: 32px;
+    }
+
+    .kitchen-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 90%;
+    }
+}
